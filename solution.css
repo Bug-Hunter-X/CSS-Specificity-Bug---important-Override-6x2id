@@ -1,0 +1,22 @@
+The following CSS demonstrates a solution avoiding the unexpected `!important` override:
+
+```css
+.parent {
+  color: blue;
+}
+
+.child {
+  color: red;
+}
+
+.parent .child {
+  color: green;
+}
+
+/* Alternatively, use a more specific !important if absolutely necessary */
+.parent .child {
+  color: purple !important;
+}
+```
+
+By removing the unnecessary `!important` declaration from `.child` or by making it more specific if absolutely needed, we improve readability and prevent unintended behavior caused by specificity conflicts.
